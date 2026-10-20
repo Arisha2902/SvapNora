@@ -217,7 +217,7 @@
       filter: 'web',
       category: 'Web Applications',
       title: 'Construction Builder Solution',
-      desc: 'Construction Builder Solution — project showcase site.',
+      desc: 'Construction and builder services web app - service catalogue, project gallery, cost breakdowns and instant enquiry booking for residential and commercial work.',
       tags: ['Construction', 'Showcase'],
       status: 'LIVE',
       url: 'https://constructionbuildersolution.com/',
@@ -234,7 +234,7 @@
         cat: 'WEB APPLICATION',
         tag: 'LIVE',
         title: 'CONSTRUCTION BUILDER SOLUTION',
-        desc: 'Construction Builder Solution — project showcase site.'
+        desc: 'Construction and builder services web app with service catalogue, project gallery and enquiry booking.'
       }
     }
   ];
