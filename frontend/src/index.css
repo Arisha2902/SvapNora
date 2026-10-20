@@ -767,6 +767,7 @@ hero-banner {
   text-transform: uppercase;
   margin: 0 0 16px;
   max-width: 12ch;
+  color: #ffffff;
   animation: hero-banner-in 0.55s var(--ease) both;
 }
 @keyframes hero-banner-in {

@@ -319,8 +319,11 @@ ul {
   .p-section-head__divider {
     display: block;
     height: 1px;
-    background: var(--purple);
+    background: #111111;
     /* margin-top: 28px; */
+  }
+  :root[data-theme='light'] .p-section-head__divider {
+    background: #a100ff;
   }
   .p-section-head .section-intro {
     max-width: 380px;
@@ -1443,7 +1446,7 @@ ul {
     font-size: 11px;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: var(--text-muted);
+    color: #000000;
     transition: color var(--t-fast) ease;
   }
   .ftab::after {
@@ -1459,8 +1462,12 @@ ul {
   }
   @media (hover: hover) {
     .ftab:hover {
-      color: var(--text);
+      color: #000000;
     }
+  }
+  :root[data-theme='light'] .ftab,
+  :root[data-theme='light'] .ftab:hover {
+    color: #ffffff;
   }
   .ftab.is-active {
     color: var(--purple);
@@ -1571,6 +1578,31 @@ ul {
     .pcard:hover .pcard__desc {
       opacity: 1;
       transform: translateX(0);
+    }
+    /* small arrow icon fades/slides in at bottom-right */
+    .pcard__hover-arrow {
+      position: absolute;
+      bottom: 12px;
+      right: 12px;
+      width: 26px;
+      height: 26px;
+      border: 1px solid var(--border-strong);
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      font-size: 11px;
+      line-height: 1;
+      color: var(--text-muted);
+      background: var(--surface-2);
+      opacity: 0;
+      transform: translateY(8px);
+      transition: opacity 0.4s ease, transform 0.4s ease, border-color 0.4s ease, color 0.4s ease;
+    }
+    .pcard:hover .pcard__hover-arrow {
+      opacity: 1;
+      transform: translateY(0);
+      border-color: var(--purple);
+      color: var(--purple);
     }
     /* hover lift — direction cycles per card: horizontal / vertical / diagonal */
     .pcard-lift-h:hover {
@@ -2002,6 +2034,9 @@ a.pcard-m:focus-visible {
   font-size: 22px;
   font-weight: 800;
   letter-spacing: 0.04em;
+}
+.footer__logo-text {
+  margin-top: 10px;
 }
 .footer__tag {
   font-size: 14px;

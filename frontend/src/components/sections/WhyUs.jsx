@@ -40,7 +40,7 @@ const FEATURES = [
   //   text: 'Automation is valuable when it removes friction from everyday work. We focus on workflows where technology can reduce repetitive effort, improve consistency, and help teams concentrate on higher-value activities.',
   // },
   {
-    num: '06',
+    num: '05',
     title: 'A Long-Term Perspective',
     text: 'We see software as an evolving asset rather than a one-time deliverable. Our approach emphasizes practical foundations, thoughtful improvements, and solutions that can adapt to changing business requirements.',
   },

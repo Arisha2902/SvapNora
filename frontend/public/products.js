@@ -150,6 +150,7 @@
           '<span class="pcard__vlabel">' + v.label + '</span>' +
           '<span class="pcard__vtag ' + statusTagClass(v.tag) + '">' + v.tag + '</span>' +
           '<div class="pcard__vcenter">' + center + '</div>' +
+          '<span class="pcard__hover-arrow" aria-hidden="true">&rsaquo;</span>' +
         '</div>' +
         '<div class="pcard__body">' +
           '<p class="pcard__cat">' + p.category.toUpperCase() + '</p>' +
