@@ -1,0 +1,94 @@
+# ==========================================================
+# Dependencies
+# ==========================================================
+node_modules/
+.pnp
+.pnp.js
+.yarn/cache
+.yarn/install-state.gz
+
+# ==========================================================
+# Build output
+# ==========================================================
+dist/
+build/
+out/
+.vite/
+.cache/
+*.tsbuildinfo
+
+# ==========================================================
+# Environment variables
+# Keep .env.example files tracked, ignore real secrets
+# ==========================================================
+.env
+.env.*
+!.env.example
+
+# ==========================================================
+# Logs
+# ==========================================================
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ==========================================================
+# Test / coverage output
+# ==========================================================
+coverage/
+.nyc_output/
+
+# ==========================================================
+# Runtime uploads (keep folder placeholder)
+# ==========================================================
+backend/uploads/*
+!backend/uploads/.gitkeep
+
+# ==========================================================
+# Caches & tooling
+# ==========================================================
+.eslintcache
+.stylelintcache
+.prettiercache
+.cache/
+npm/
+
+# ==========================================================
+# Editors
+# ==========================================================
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea/
+*.swp
+*.swo
+*.swn
+*~
+*.sublime-workspace
+*.sublime-project
+
+# ==========================================================
+# OS files
+# ==========================================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+Desktop.ini
+
+# ==========================================================
+# Misc
+# ==========================================================
+*.pid
+*.pid.lock
+*.seed
+*.orig
+npm-debug.log*

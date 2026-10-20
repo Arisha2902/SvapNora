@@ -1,0 +1,359 @@
+/* ==========================================================================
+   Home navbar chrome for the pre-built static pages.
+   Mirrors the navbar section of src/index.css + the nav-scoped button reset.
+   Linked AFTER each page's own stylesheet so it wins the cascade.
+   ========================================================================== */
+
+.nav {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 1000;
+  background: #000000 !important;
+  background-color: #000000 !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14) !important;
+  transition: background var(--t-fast) ease;
+}
+
+:root[data-theme='light'] .nav,
+:root[data-theme='dark'] .nav {
+  position: sticky !important;
+  top: 0 !important;
+  background: #000000 !important;
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  --text: #ffffff;
+  --text-body: #b0b0b0;
+  --text-muted: #666666;
+  --border: rgba(255, 255, 255, 0.12);
+  --border-strong: rgba(255, 255, 255, 0.28);
+}
+
+.nav__inner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  height: var(--nav-h);
+  background: #000000 !important;
+}
+
+.nav__logo {
+  font-weight: 800;
+  font-size: 18px;
+  letter-spacing: 0.04em;
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  flex: none;
+  color: #ffffff !important;
+}
+.nav__logo-mark {
+  display: block;
+  height: 30px;
+  width: auto;
+  margin-right: -10px;
+}
+.nav__logo-text {
+  display: block;
+  max-width: 0;
+  margin-left: 0;
+  margin-top: 10px;
+  opacity: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  color: #ffffff !important;
+  transition:
+    max-width var(--t-fast) var(--ease),
+    margin-left var(--t-fast) var(--ease),
+    opacity var(--t-fast) var(--ease);
+}
+.nav__logo:hover .nav__logo-text,
+.nav__logo:focus-visible .nav__logo-text {
+  max-width: 110px;
+  margin-left: 9px;
+  opacity: 1;
+}
+.logo-chevron {
+  color: var(--purple);
+  font-family: var(--font-mono);
+  margin-left: 3px;
+}
+
+.nav__links {
+  display: none;
+  gap: 32px;
+  margin-inline: auto;
+}
+.nav__links a {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-body);
+  padding: 4px 0;
+  position: relative;
+  transition: color var(--t-fast) ease;
+}
+.nav__links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: var(--purple);
+  transition: width var(--t-fast) var(--ease);
+}
+.nav__links a:hover {
+  color: var(--text);
+}
+.nav__links a:hover::after {
+  width: 100%;
+}
+.nav__links a.active,
+.nav__links a.is-active {
+  color: var(--text);
+}
+.nav__links a.active::after,
+.nav__links a.is-active::after {
+  opacity: 1;
+}
+
+.nav__actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: auto;
+}
+
+.icon-btn {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+  color: #ffffff !important;
+  background: transparent !important;
+  transition:
+    border-color var(--t-fast) ease,
+    color var(--t-fast) ease,
+    background var(--t-fast) ease;
+}
+.icon-btn:hover {
+  border-color: var(--purple) !important;
+  color: var(--purple) !important;
+  background: var(--purple-glow) !important;
+}
+.icon-btn svg {
+  width: 18px;
+  height: 18px;
+  color: #ffffff !important;
+  stroke: #ffffff !important;
+}
+
+.nav__cta-compact {
+  display: inline-flex;
+  width: auto;
+  flex: none;
+}
+.nav__cta-full {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .nav__links {
+    display: flex;
+  }
+  .nav__burger {
+    display: none;
+  }
+  .nav__cta-compact {
+    display: none;
+  }
+  .nav__cta-full {
+    display: inline-flex;
+  }
+  .nav__logo {
+    margin-left: clamp(0px, 1.5vw, 32px);
+  }
+}
+
+/* Nav-scoped button parity with the home page */
+.nav .btn {
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: none;
+}
+.nav .btn__arrow {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  transition: transform var(--t-fast) var(--ease);
+}
+.nav .btn:hover .btn__arrow {
+  transform: translateX(4px);
+}
+
+/* ==========================================================================
+   Full-Screen Mobile Menu & Mobile Chrome: ALWAYS SOLID BLACK BG & WHITE TEXT
+   ========================================================================== */
+.mobile-menu,
+:root[data-theme='light'] .mobile-menu,
+:root[data-theme='dark'] .mobile-menu {
+  position: fixed !important;
+  inset: var(--nav-h) 0 0 0 !important;
+  z-index: 999 !important;
+  background: #000000 !important;
+  background-color: #000000 !important;
+  padding: 20px var(--pad-x) 40px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 4px !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  transform: translateY(-8px) !important;
+  transition:
+    opacity var(--t-fast) var(--ease),
+    transform var(--t-fast) var(--ease),
+    visibility 0s linear var(--t-fast) !important;
+  color: #ffffff !important;
+  --text: #ffffff !important;
+  --text-body: #b0b0b0 !important;
+  --text-muted: #888888 !important;
+  --border: rgba(255, 255, 255, 0.14) !important;
+  --border-strong: rgba(255, 255, 255, 0.28) !important;
+  overflow-y: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+}
+
+.mobile-menu.is-open,
+:root[data-theme='light'] .mobile-menu.is-open,
+:root[data-theme='dark'] .mobile-menu.is-open {
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+  transform: none !important;
+  transition: opacity var(--t-fast) var(--ease), transform var(--t-fast) var(--ease) !important;
+}
+
+@media (min-width: 1024px) {
+  .mobile-menu,
+  :root[data-theme='light'] .mobile-menu,
+  :root[data-theme='dark'] .mobile-menu {
+    display: none !important;
+    pointer-events: none !important;
+  }
+}
+
+.mobile-menu__links,
+:root[data-theme='light'] .mobile-menu__links,
+:root[data-theme='dark'] .mobile-menu__links {
+  display: flex !important;
+  flex-direction: column !important;
+  background: #000000 !important;
+}
+
+.mobile-menu__links a,
+:root[data-theme='light'] .mobile-menu__links a,
+:root[data-theme='dark'] .mobile-menu__links a {
+  display: flex !important;
+  align-items: baseline !important;
+  gap: 14px !important;
+  font-size: 26px !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.01em !important;
+  padding: 14px 0 !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14) !important;
+  color: #ffffff !important;
+  transition: color var(--t-fast) ease !important;
+  text-decoration: none !important;
+}
+.mobile-menu__links a:hover,
+:root[data-theme='light'] .mobile-menu__links a:hover,
+:root[data-theme='dark'] .mobile-menu__links a:hover {
+  color: var(--purple) !important;
+}
+.mobile-menu__links a span,
+:root[data-theme='light'] .mobile-menu__links a span,
+:root[data-theme='dark'] .mobile-menu__links a span {
+  font-family: var(--font-mono) !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  color: var(--purple) !important;
+}
+
+.mobile-menu .btn,
+:root[data-theme='light'] .mobile-menu .btn,
+:root[data-theme='dark'] .mobile-menu .btn {
+  margin-top: 24px !important;
+}
+
+.mobile-menu__logins,
+:root[data-theme='light'] .mobile-menu__logins,
+:root[data-theme='dark'] .mobile-menu__logins {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 10px !important;
+  margin: 20px 0 !important;
+}
+.mobile-menu__logins a,
+:root[data-theme='light'] .mobile-menu__logins a,
+:root[data-theme='dark'] .mobile-menu__logins a {
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+  padding: 14px 16px !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  color: #ffffff !important;
+  background: rgba(255, 255, 255, 0.05) !important;
+  text-decoration: none !important;
+}
+.mobile-menu__logins a:hover,
+:root[data-theme='light'] .mobile-menu__logins a:hover,
+:root[data-theme='dark'] .mobile-menu__logins a:hover {
+  border-color: var(--purple) !important;
+  color: var(--purple) !important;
+}
+
+@media (max-width: 1023.98px) {
+  .nav,
+  :root[data-theme='light'] .nav,
+  :root[data-theme='dark'] .nav {
+    background: #000000 !important;
+    background-color: #000000 !important;
+    color: #ffffff !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.14) !important;
+  }
+  .nav .nav__inner {
+    background: #000000 !important;
+  }
+  .nav__logo,
+  .nav__logo-text,
+  :root[data-theme='light'] .nav__logo-text {
+    color: #ffffff !important;
+  }
+  .nav .icon-btn,
+  :root[data-theme='light'] .nav .icon-btn {
+    color: #ffffff !important;
+    border-color: rgba(255, 255, 255, 0.25) !important;
+    background: transparent !important;
+  }
+  .nav .icon-btn svg,
+  :root[data-theme='light'] .nav .icon-btn svg {
+    color: #ffffff !important;
+    stroke: #ffffff !important;
+  }
+}
+
+.tabbar,
+:root[data-theme='light'] .tabbar,
+:root[data-theme='dark'] .tabbar {
+  background: #000000 !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.14) !important;
+}
+.tabbar__item,
+:root[data-theme='light'] .tabbar__item,
+:root[data-theme='dark'] .tabbar__item {
+  color: #a1a1aa !important;
+}
+.tabbar__item.is-active,
+:root[data-theme='light'] .tabbar__item.is-active,
+:root[data-theme='dark'] .tabbar__item.is-active {
+  color: var(--purple) !important;
+}

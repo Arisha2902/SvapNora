@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta
+      name="description"
+      content="About SvapNora — a technology startup based in Prayagraj, India. Our story, mission, values, team and engineering philosophy."
+    />
+    <title>About Us — SvapNora · Technology Startup, Prayagraj</title>
+        <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="about.css" />
+      <link rel="stylesheet" href="home-nav.css" />
+    <link rel="stylesheet" href="home-footer.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="nav">
+      <div class="container nav__inner">
+        <button class="icon-btn nav__burger" id="navBurger" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open navigation menu" onclick="(function(){var m=document.getElementById('mobileMenu');var b=document.getElementById('navBurger');var o=!m.classList.contains('is-open');m.classList.toggle('is-open',o);m.setAttribute('aria-hidden',String(!o));b.setAttribute('aria-expanded',String(o));document.body.style.overflow=o?'hidden':'';})()">
+          <svg class="ic-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+          <svg class="ic-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true" style="display:none"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+
+        <a href="/" class="nav__logo" aria-label="SvapNora — home"><img src="/logo-mark.png" alt="" class="nav__logo-mark" width="30" height="30" /><span class="nav__logo-text">vapNora</span></a>
+
+        <nav class="nav__links" aria-label="Primary">
+          <a href="/services">Services</a>
+          <a href="/products">Products</a>
+          <a href="/glowlang">GlowLang</a>
+          <a href="/about" class="active" aria-current="page">About Us</a>
+        </nav>
+
+        <div class="nav__actions">
+          <button class="icon-btn nav__theme" id="themeToggle" aria-label="Switch to light theme">
+            <svg class="ic-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41-1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+            <svg class="ic-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true" style="display:none"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+          </button>
+          <a href="/contact" class="btn btn--primary nav__cta-full" aria-label="Discuss your project"><span class="btn__label">Discuss Your Project</span><span class="btn__arrow" aria-hidden="true">&gt;</span></a>
+          <a href="/contact" class="btn btn--primary nav__cta-compact" aria-label="Discuss your project"><span class="btn__label">Discuss</span><span class="btn__arrow" aria-hidden="true">&gt;</span></a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Full-screen mobile menu (rendered outside header to avoid stacking/clipping) -->
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <nav class="mobile-menu__links" aria-label="Mobile">
+        <a href="/services"><span>01</span>Services</a>
+        <a href="/products"><span>02</span>Products</a>
+        <a href="/glowlang"><span>03</span>GlowLang</a>
+        <a href="/about"><span>04</span>About Us</a>
+        <a href="/contact"><span>05</span>Contact</a>
+      </nav>
+      <div class="mobile-menu__logins">
+        <a href="/employee/login">Employee portal</a>
+      </div>
+      <a href="/contact" class="btn btn--primary" aria-label="Discuss your project"><span class="btn__label">Discuss Your Project</span><span class="btn__arrow" aria-hidden="true">&gt;</span></a>
+    </div>
+
+    <!-- ======================= MOBILE BOTTOM TAB BAR ======================= -->
+    <nav class="tabbar" aria-label="Quick sections">
+      <a href="index.html" class="tabbar__item">
+        <span class="tabbar__icon" data-icon="home"></span>
+        <span>Home</span>
+      </a>
+      <a href="services.html" class="tabbar__item">
+        <span class="tabbar__icon" data-icon="grid"></span>
+        <span>Services</span>
+      </a>
+      <a href="products.html" class="tabbar__item">
+        <span class="tabbar__icon" data-icon="shield"></span>
+        <span>Products</span>
+      </a>
+      <a href="#top" class="tabbar__item is-active" aria-current="page">
+        <span class="tabbar__icon" data-icon="info"></span>
+        <span>About</span>
+      </a>
+    </nav>
+
+    <main id="main">
+      <!-- ======================= WHAT WE STAND FOR ======================= -->
+      <section class="section section--dark section--dots a-values" id="top">
+        <div class="a-values__glow" aria-hidden="true"></div>
+        <div class="a-values__glow-2" aria-hidden="true"></div>
+        <div class="container">
+          <header class="section-head a-values__head reveal">
+            <div class="a-values__eyebrow-wrap">
+              <span class="a-values__eyebrow-badge">
+                <span class="a-values__eyebrow-dot" aria-hidden="true"></span>
+                WHAT WE STAND FOR
+              </span>
+              <span class="a-values__telemetry">CORE_PRINCIPLES // SPEC_V1</span>
+            </div>
+            <h1 class="section-title">Principles We <span class="accent">Build By</span></h1>
+            <p class="section-intro">
+              Every architecture and line of code at SvapNora is shaped by pragmatic engineering standards — engineered for clarity, performance, and enterprise longevity.
+            </p>
+          </header>
+
+          <div class="a-values__grid">
+            <!-- 01 -->
+            <article class="a-value reveal">
+              <div class="a-value__header">
+                <span class="a-value__num">01</span>
+                <div class="a-value__icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+                </div>
+              </div>
+              <h3>Built With Intent</h3>
+              <p>We begin with the problem, not just the technology. Every solution is grounded in clear purpose, defined business requirements, and measurable real-world value.</p>
+              <div class="a-value__footer">
+                <span class="a-value__tag">PILLAR // INTENT</span>
+              </div>
+            </article>
+
+            <!-- 02 -->
+            <article class="a-value reveal">
+              <div class="a-value__header">
+                <span class="a-value__num">02</span>
+                <div class="a-value__icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                </div>
+              </div>
+              <h3>Practical Engineering</h3>
+              <p>Clear requirements, practical value, and thoughtful problem-solving over speculative abstractions or unnecessary technology overhead.</p>
+              <div class="a-value__footer">
+                <span class="a-value__tag">PILLAR // PRAGMATIC</span>
+              </div>
+            </article>
+
+            <!-- 03 -->
+            <article class="a-value reveal">
+              <div class="a-value__header">
+                <span class="a-value__num">03</span>
+                <div class="a-value__icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                </div>
+              </div>
+              <h3>Performance-Conscious</h3>
+              <p>Efficient code, sound architecture, and continuous testing to minimize overhead and deliver responsive, high-throughput software under real-world load.</p>
+              <div class="a-value__footer">
+                <span class="a-value__tag">PILLAR // EFFICIENCY</span>
+              </div>
+            </article>
+
+            <!-- 04 -->
+            <article class="a-value reveal">
+              <div class="a-value__header">
+                <span class="a-value__num">04</span>
+                <div class="a-value__icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+                </div>
+              </div>
+              <h3>Designed for Maintainability</h3>
+              <p>Clear structure, manageable complexity, and clean codebases that stay understandable, testable, and seamless to enhance as business needs evolve.</p>
+              <div class="a-value__footer">
+                <span class="a-value__tag">PILLAR // MODULARITY</span>
+              </div>
+            </article>
+
+            <!-- 05 -->
+            <article class="a-value reveal">
+              <div class="a-value__header">
+                <span class="a-value__num">05</span>
+                <div class="a-value__icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+                </div>
+              </div>
+              <h3>Purposeful Automation</h3>
+              <p>Automation is valuable when it removes friction from everyday operations. We focus on workflows that eliminate repetitive manual effort and accelerate team momentum.</p>
+              <div class="a-value__footer">
+                <span class="a-value__tag">PILLAR // MOMENTUM</span>
+              </div>
+            </article>
+
+            <!-- 06 -->
+            <article class="a-value reveal">
+              <div class="a-value__header">
+                <span class="a-value__num">06</span>
+                <div class="a-value__icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </div>
+              </div>
+              <h3>Long-Term Perspective</h3>
+              <p>Software is an evolving asset rather than a one-time deliverable. Our approach emphasizes durable foundations, thoughtful upgrades, and solutions that scale with your roadmap.</p>
+              <div class="a-value__footer">
+                <span class="a-value__tag">PILLAR // LONGEVITY</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================= 5. SIGNATURE: OUR OWN PROGRAMMING LANGUAGE (black) ======================= -->
+      <section class="section section--dark section--dots a-lang">
+        <div class="container">
+          <article class="a-feature reveal">
+            <span class="a-feature__tag">Signature Initiative</span>
+            <div class="a-feature__grid">
+              <div class="a-feature__text">
+                <h2 class="a-feature__title">Engineering at a Deeper Level</h2>
+                <p>
+                  We work on our own programming language as part of our engineering approach. This
+                  reflects our interest in understanding software at a deeper level and developing
+                  our own tools rather than depending exclusively on existing abstractions.
+                </p>
+              </div>
+              <div class="a-feature__code">
+                <div class="term">
+                  <div class="term__bar">
+                    <span class="term__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                    <span class="term__title">lang/core/pipeline.knt</span>
+                    <span class="term__tag">SIGNATURE</span>
+                  </div>
+                  <pre class="code" aria-label="Pipeline language definition"><code><span className="c-com">// Sovereign pipeline specification</span>
+<span className="c-kw">def</span> Pipeline {
+  source: IngestStream;
+  verify: <span className="c-fn">LedgerConfirmed</span>;
+  emit: Receipt;
+}
+
+<span className="c-kw">await</span> Pipeline.<span className="c-fn">run</span>(ctx);</code></pre>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ======================= 6. THE TEAM (white) ======================= -->
+      <section class="section section--light a-team">
+        <div class="container">
+          <header class="section-head reveal">
+            <p class="eyebrow"><span class="eyebrow__bullet" aria-hidden="true"></span>The People</p>
+            <h2 class="section-title">Meet the Team</h2>
+          </header>
+          <!-- Team cards rendered by about.js from the placeholder data array -->
+          <div class="a-team__row" id="teamRow"></div>
+        </div>
+      </section>
+
+      <!-- ======================= 7. BASED IN PRAYAGRAJ (light grey) ======================= -->
+      <section class="section section--grey a-base">
+        <div class="container">
+          <div class="a-base__grid">
+            <div class="a-base__text reveal">
+              <p class="eyebrow"><span class="eyebrow__bullet" aria-hidden="true"></span>Where We Build</p>
+              <h2 class="section-title">Rooted in Prayagraj</h2>
+              <p class="a-base__para">
+                [Placeholder: a short paragraph about the city, the team and why we build from here.]
+              </p>
+              <div class="a-base__addr">
+                <p class="a-base__addr-row">
+                  <span class="a-base__addr-icon" data-icon="pin"></span>
+                  Civil Lines / Tech Hub, Prayagraj, Uttar Pradesh 211001, India
+                </p>
+                <p class="a-base__addr-row a-base__addr-row--coords">25.4358° N, 81.8463° E</p>
+              </div>
+            </div>
+
+            <!-- Map-style placeholder -->
+            <div class="a-base__map reveal" role="img" aria-label="Placeholder map of Prayagraj with the SvapNora office pin">
+              <div class="a-base__pin">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                <span class="a-base__pin-ring" aria-hidden="true"></span>
+              </div>
+              <div class="a-base__map-label">
+                <p class="a-base__map-title">SvapNora HQ</p>
+                <p class="a-base__map-sub">Civil Lines / Tech Hub — 25.4358° N, 81.8463° E</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================= 8. CTA BANNER (full-width purple) ======================= -->
+      <section class="p-cta">
+        <div class="container p-cta__inner">
+          <div class="p-cta__copy reveal">
+            <h2 class="p-cta__title">Have a Problem Worth Solving?</h2>
+            <p class="p-cta__text">
+              Tell us what is slowing your business down, what you want to automate, or what you
+              want to build. Let&rsquo;s explore a practical technology solution together.
+            </p>
+          </div>
+          <div class="p-cta__action reveal">
+            <a href="index.html#contact" class="btn btn--white">Discuss Your Project</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer footer--dots">
+      <div class="container">
+        <div class="footer__top">
+          <div class="footer__brand">
+            <a href="/" class="footer__logo" aria-label="SvapNora — home"><img src="/logo-mark.png" alt="" class="footer__logo-mark" width="40" height="40" />
+              <span class="footer__logo-text">vapNora</span>
+            </a>
+            <p class="footer__tag">
+              Building Smarter Businesses Through Technology. Sovereign enterprise solutions,
+              mission-critical transformation, and frontier intelligence integration.
+            </p>
+            <div class="footer__socials">
+              <a href="#" aria-label="LinkedIn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4V8h4v1.5A6 6 0 0 1 16 8z" /><rect x="2" y="9" width="4" height="12" /><circle cx="4" cy="4" r="2" /></svg>
+              </a>
+              <a href="#" aria-label="X">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4l16 16" /><path d="M20 4 4 20" /></svg>
+              </a>
+              <a href="#" aria-label="GitHub">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55v-2.17c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.75 2.69 1.25 3.34.95.1-.74.4-1.25.72-1.53-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.25 5.67.41.35.77 1.05.77 2.12v3.15c0 .3.21.67.8.55A10.52 10.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z" /></svg>
+              </a>
+              <a href="#" aria-label="Instagram">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" /><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" /><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" /></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="footer__cols">
+            <div class="footer__col">
+              <h4>Explore</h4>
+              <ul>
+                <li><a href="/#why-us">Why Us</a></li>
+                <li><a href="/#how-we-work">How We Work</a></li>
+                <li><a href="/#who-we-serve">Who We Serve</a></li>
+                <li><a href="/glowlang">GlowLang</a></li>
+              </ul>
+            </div>
+
+            <div class="footer__col">
+              <h4>Quick Links</h4>
+              <ul>
+                <li><a href="/services">Services</a></li>
+                <li><a href="/products">Products</a></li>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+              </ul>
+            </div>
+
+            <div class="footer__col">
+               <h4>Conatct</h4>
+               <ul>
+                <li>
+                  <a href="mailto:hello@yourcompany.com">hello@yourcompany.com</a>
+                </li>
+                <li>Mon–Fri, 9:30 AM – 6:30 PM IST</li>
+               </ul>
+            </div>
+          </div>
+        </div>
+
+        <p class="footer__location">Prayagraj · Uttar Pradesh · India</p>
+
+        <div class="footer__bottom">
+          <p>© 2026 Technology Company. All rights reserved. Prayagraj, India.</p>
+          <nav aria-label="Legal">
+            <a href="/privacy">Privacy Statement</a>
+            <a href="/terms">Terms of Service</a>
+            <a href="/contact">Global Compliance</a>
+          </nav>
+        </div>
+      </div>
+    </footer>
+
+    <script src="projects-data.js"></script>
+    <script src="about.js"></script>
+    <script src="products.js"></script>
+  </body>
+</html>

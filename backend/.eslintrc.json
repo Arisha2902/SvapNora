@@ -1,0 +1,22 @@
+{
+  "root": true,
+  "env": {
+    "node": true,
+    "es2022": true,
+    "commonjs": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2022,
+    "sourceType": "script"
+  },
+  "extends": ["eslint:recommended", "plugin:node/recommended-script", "prettier"],
+  "rules": {
+    "no-console": "off",
+    "no-process-exit": "off",
+    "no-unused-vars": ["error", { "argsIgnorePattern": "^_", "caughtErrorsIgnorePattern": "^_" }],
+    "node/no-unpublished-require": "off",
+    "node/no-process-exit": "off",
+    "node/no-unsupported-features/es-syntax": "off"
+  },
+  "ignorePatterns": ["node_modules/", "uploads/"]
+}

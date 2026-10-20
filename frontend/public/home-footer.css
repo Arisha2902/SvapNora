@@ -1,0 +1,183 @@
+/* Footer chrome for the pre-built static pages - extracted from src/index.css
+   (every .footer* rule). Linked AFTER the page stylesheet so it wins. */
+
+:root[data-theme='light'] .footer--dots {
+  --dot: rgba(255, 255, 255, 0.05);
+}
+.footer--dots {
+  background-image: radial-gradient(var(--dot) 1px, transparent 1.2px);
+  background-size: 26px 26px;
+}
+.footer {
+  background: var(--footer-bg);
+  color: var(--text);
+  border-top: 1px solid var(--border);
+  padding-top: 56px;
+}
+:root[data-theme='light'] .footer {
+  color: #ffffff;
+  --text: #ffffff;
+  --text-body: #b0b0b0;
+  --text-muted: #666666;
+}
+@media (min-width: 1024px) {
+.footer {
+    padding-top: 72px;
+  }
+}
+.footer__top {
+  display: grid;
+  gap: 48px;
+  padding-bottom: 48px;
+}
+@media (min-width: 1024px) {
+.footer__top {
+    grid-template-columns: 1.1fr 2.4fr;
+    gap: 64px;
+  }
+}
+.footer__logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+.footer__logo-mark {
+  display: block;
+  height: 40px;
+  width: auto;
+  margin-right: -10px;
+}
+.footer__logo-text {
+  margin-top: 10px;
+  margin-left: -7px;
+}
+.footer__tag {
+  font-size: 13px;
+  color: var(--text-body);
+  margin: 16px 0 24px;
+  max-width: 420px;
+  line-height: 1.7;
+}
+.footer__socials {
+  display: flex;
+  gap: 10px;
+}
+.footer__socials a {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--border-strong);
+  color: var(--text-body);
+  transition:
+    color var(--t-fast) ease,
+    border-color var(--t-fast) ease,
+    background var(--t-fast) ease;
+}
+.footer__socials a:hover {
+  color: var(--purple);
+  border-color: var(--purple);
+  background: var(--purple-glow);
+}
+.footer__socials svg {
+  width: 16px;
+  height: 16px;
+}
+.footer__cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+@media (min-width: 1024px) {
+.footer__cols {
+    display: flex;
+    justify-content: flex-end;
+    gap: clamp(32px, 4vw, 72px);
+  }
+.footer__group {
+    display: contents;
+  }
+}
+.footer__group-label {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--purple);
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+@media (min-width: 1024px) {
+.footer__group-label {
+    display: none;
+  }
+}
+.footer__col h4 {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text);
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+.footer__col ul {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.footer__col a {
+  font-size: 13.5px;
+  color: var(--text-body);
+  transition: color var(--t-fast) ease;
+}
+.footer__col a:hover {
+  color: var(--purple);
+}
+.footer__col li {
+  font-size: 13.5px;
+  color: var(--text-body);
+}
+.footer__location {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  padding: 24px 0;
+}
+@media (min-width: 1024px) {
+.footer__location {
+    display: none;
+  }
+}
+.footer__bottom {
+  border-top: 1px solid var(--border);
+  padding: 24px 0 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  font-size: 12.5px;
+  color: var(--text-muted);
+}
+@media (min-width: 1024px) {
+.footer__bottom {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.footer__bottom nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+.footer__bottom a {
+  color: var(--text-muted);
+  transition: color var(--t-fast) ease;
+}
+.footer__bottom a:hover {
+  color: var(--purple);
+}
