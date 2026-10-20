@@ -1,0 +1,13 @@
+{
+  "name": "svapnora",
+  "private": true,
+  "version": "1.0.0",
+  "description": "SvapNora — marketing site (frontend) + business platform API (backend).",
+  "scripts": {
+    "build": "npm install --prefix frontend && npm run build --prefix frontend",
+    "dev": "npm run dev --prefix frontend",
+    "build:frontend": "npm run build --prefix frontend",
+    "dev:backend": "npm run dev --prefix backend",
+    "start:backend": "npm start --prefix backend"
+  }
+}

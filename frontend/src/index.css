@@ -855,6 +855,7 @@ hero-banner {
   gap: 12px;
   padding-bottom: 16px;
   flex: 0 0 auto;
+  background: black;
 }
 @media (min-width: 1024px) {
   .hero-banner__cards { grid-template-columns: repeat(3, 1fr); }
